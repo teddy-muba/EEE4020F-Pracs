@@ -1,0 +1,3 @@
+/Users/teddymuba/Downloads/Prac4_MPI_Sorting/cmake-build-debug/CMakeFiles/Prac4_MPI_Sorting.dir
+/Users/teddymuba/Downloads/Prac4_MPI_Sorting/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/teddymuba/Downloads/Prac4_MPI_Sorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir
