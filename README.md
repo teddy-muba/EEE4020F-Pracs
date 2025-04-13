@@ -31,7 +31,7 @@ MPI: The project requires OpenMPI to run. You need to have OpenMPI installed and
 # Run Program
 The program is now ready to be executed. You can run it with the following command:
 - mpirun -np 4 ./Prac4_MPI_Sorting input.csv output.csv
-Here, input.csv is the input file, and output.csv is where the sorted matrix will be saved.
+- Here, input.csv is the input file, and output.csv is where the sorted matrix will be saved.
 
 # Usage
 Command Line Arguments
