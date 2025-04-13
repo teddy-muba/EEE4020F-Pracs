@@ -40,8 +40,8 @@ input.csv: The path to the input CSV file that contains the matrix.
 output.csv: The path where the sorted matrix will be saved.
 
 # Example:
-mpirun -np 4 ./Prac4_MPI_Sorting input.csv output.csv
-This will run the program with 4 processes, reading the matrix from input.csv, sorting it in parallel, and writing the result to output.csv.
+- mpirun -np 4 ./Prac4_MPI_Sorting input.csv output.csv
+- This will run the program with 4 processes, reading the matrix from input.csv, sorting it in parallel, and writing the result to output.csv.
 
 # File Generation
 The program generates a random matrix of size 8x6 (rows x columns) and saves it to input.csv by default. You can adjust the size of the matrix or modify the file generation behavior if needed.
@@ -58,11 +58,11 @@ main.c:
 
 - Writing the sorted matrix to the output CSV (write_matrix_to_csv)
 
-CMakeLists.txt
+CMakeLists.txt:
 - CMake configuration file to set up the build environment and link the necessary MPI libraries.
 
-- input.csv
+- input.csv:
 The input file containing the matrix to be sorted. The matrix is read from this file, sorted, and then written to output.csv.
 
-- output.csv
+- output.csv:
 The file where the sorted matrix is saved after the parallel sorting process completes.
