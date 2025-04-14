@@ -9,6 +9,7 @@
 #define DATA_TAG 2
 #define RESULT_TAG 3
 
+
 typedef struct {
     int num_rows;
     int num_cols_assigned;
@@ -135,6 +136,9 @@ int main(int argc, char *argv[]) {
 
     MPI_Barrier(MPI_COMM_WORLD);  // Ensure file is ready before read
 
+    // --- Start timing right before master starts computation ---
+    double start_time = MPI_Wtime();
+
     if (rank == MASTER) {
         double *matrix = NULL;
         int rows, cols;
@@ -189,6 +193,13 @@ int main(int argc, char *argv[]) {
 
         MPI_Send(submatrix, header.num_rows * header.num_cols_assigned, MPI_DOUBLE, MASTER, RESULT_TAG, MPI_COMM_WORLD);
         free(submatrix);
+    }
+
+    // --- End timing after final result written ---
+    double end_time = MPI_Wtime();
+
+    if (rank == MASTER) {
+        printf("Matrix Size: %dx%d, Total Execution Time: %.3f seconds\n", gen_rows, gen_cols, end_time - start_time);
     }
 
     MPI_Finalize();
